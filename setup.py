@@ -47,5 +47,10 @@ setup(
               ],
     namespace_packages=['virtualenvwrapper'],
     packages=find_packages(),
+    entry_points={
+        'virtualenvwrapper.project.template': [
+            'djangodeploy = virtualenvwrapper.django_deploy:template',
+        ],
+    },
     include_package_data=True,
 )
